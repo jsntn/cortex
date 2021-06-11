@@ -8,8 +8,11 @@
     {{- block "footerfiles" . -}}{{- end -}}
     <script>
       document.addEventListener('keydown', function(event) {
+        if(event.keyCode == 37) { // left key
+          window.location.href = '/posts/';
+        }
         if(event.keyCode == 39) { // right key
-          window.location.href = '/search';
+          window.location.href = '/search/';
         }
       });
     </script>
